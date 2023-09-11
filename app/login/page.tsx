@@ -25,37 +25,36 @@ const Login = () => {
     if (res?.ok) return router.push('/dashboard')
   }
   return (
-    <>
-      <main className='justify-center h-[calc(100vh-4rem)] flex items-center'>
-        <form
-          onSubmit={handleSubmit}
-          className='bg-neutral-950 px-8 py-10 w-3/12'
-        >
-          {error && (
-            <div className='bg-red-500 text-white p-2 mb-2'>{error}</div>
-          )}
-          <h1 className='text-4xl font-bold mb-7'>Inicia Sesión</h1>
-          <label className='text-slate-300'>Email:</label>
-          <input
-            type='email'
-            placeholder='Escribe tu correo'
-            name='email'
-            className='bg-zinc-800 px-4 py-2 block mb-2 w-full'
-          />
-          <label className='text-slate-300'>Contraseña:</label>
-          <input
-            type='password'
-            placeholder='Escribe tu contraseña'
-            name='password'
-            className='bg-zinc-800 px-4 py-2 block mb-2 w-full'
-          />
+    <main className='justify-center flex pt-32'>
 
-          <button className='bg-blue-500 text-white px-4 py-2 block w-full mt-4'>
-            Iniciar Sesión
-          </button>
-        </form>
-      </main>
-    </>
+      <form onSubmit={handleSubmit} className='bg-light-coral-red px-8 py-10 w-3/12 rounded-xl '>
+
+        {error && <div className='bg-deep-blue text-light-coral-red p-2 mb-7 rounded-lg text-center'>{error}</div>}
+
+        <h1 className='text-4xl font-bold mb-7 text-beige text-center'>Inicia Sesión</h1>
+
+        <label className='text-beige font-bold'>Email:</label>
+        <input
+          type='email'
+          placeholder='Escribe tu correo'
+          name='email'
+          className='bg-zinc-800 text-beige px-4 py-2 block mb-7 w-full rounded-lg'
+        />
+
+        <label className='text-beige font-bold'>Contraseña:</label>
+        <input
+          type='password'
+          placeholder='Escribe tu contraseña'
+          name='password'
+          className='bg-zinc-800 text-beige px-4 py-2 block mb-7 w-full rounded-lg'
+        />
+
+        <button className='bg-deep-blue text-light-coral-red font-bold px-4 py-2 block w-full mt-4 rounded-lg'>
+          Iniciar Sesión
+        </button>
+
+      </form>
+    </main>
   )
 }
 
