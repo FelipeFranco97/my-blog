@@ -2,23 +2,23 @@ import { NextResponse } from 'next/server'
 import User from '@/models/user'
 import bcrypt from 'bcryptjs'
 import { connectDB } from '@/libs/mongodb'
+import mongoose from 'mongoose'
 
 export async function POST(request: Request) {
-  const { fullname, email, password } = await request.json()
-  console.log(fullname, email, password)
-
-  if (!password || password.length < 6)
-    return NextResponse.json(
-      {
-        message: 'La contraseña debería tener por lo menos 6 caraceteres',
-      },
-      {
-        status: 400,
-      }
-    )
-
   try {
     await connectDB()
+
+    const { fullname, email, password } = await request.json()
+
+    if (!password || password.length < 6)
+      return NextResponse.json(
+        {
+          message: 'La contraseña debería tener por lo menos 6 caraceteres',
+        },
+        {
+          status: 400,
+        }
+      )
 
     const userFound = await User.findOne({ email })
 
@@ -42,10 +42,26 @@ export async function POST(request: Request) {
     const savedUser = await user.save()
     console.log(savedUser)
 
-    return NextResponse.json(savedUser)
+    return NextResponse.json(
+      {
+        fullname,
+        email,
+        createdAt: savedUser.createdAt,
+        updatedAt: savedUser.updatedAt,
+      },
+      { status: 201 }
+    )
   } catch (error) {
-    console.log(error)
-
+    if (error instanceof mongoose.Error.ValidationError) {
+      return NextResponse.json(
+        {
+          message: error.message,
+        },
+        {
+          status: 400,
+        }
+      )
+    }
     return NextResponse.error()
   }
 }
