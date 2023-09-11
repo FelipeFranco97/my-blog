@@ -3,7 +3,7 @@
 import { FormEvent, useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import Link from "next/link";
+import Link from 'next/link'
 
 const Login = () => {
   const [error, setError] = useState('')
@@ -49,9 +49,9 @@ const Login = () => {
             name='password'
             className='bg-zinc-800 px-4 py-2 block mb-2 w-full'
           />
-          
+
           <button className='bg-blue-500 text-white px-4 py-2 block w-full mt-4'>
-            Iniciar Sesion
+            Iniciar Sesión
           </button>
         </form>
       </main>
