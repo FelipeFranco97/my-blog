@@ -16,7 +16,15 @@ const config: Config = {
       colors: {
         'deep-blue': '#001233',
         'light-coral-red': '#FF595A',
-        'beige': '#CAC0B3'
+        'beige': '#CAC0B3',
+        'onyx': '#353935'
+      },
+      minHeight:{
+        '1/4': '25%'
+      },
+      spacing:{
+        '5%': '5%',
+        '10%': '10%'
       }
     },
   },

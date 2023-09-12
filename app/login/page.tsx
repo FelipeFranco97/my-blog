@@ -17,12 +17,14 @@ const Login = () => {
     const res = await signIn('credentials', {
       email: formData.get('email'),
       password: formData.get('password'),
-      redirect: false,
+      redirect: false
     })
 
-    if (res?.error) setError(res.error as string)
-
-    if (res?.ok) return router.push('/dashboard')
+    if (res?.error) {
+      setError('Credenciales Incorrectas');
+    } else if (res?.ok) {
+      router.push('/dashboard');
+    }
   }
   return (
     <main className='justify-center flex pt-32'>

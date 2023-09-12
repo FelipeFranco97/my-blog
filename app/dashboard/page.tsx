@@ -1,27 +1,30 @@
 'use client'
 
 import { useSession, signOut } from 'next-auth/react'
+import Link from 'next/link'
 
 const Dashboard = () => {
-  const { data: session, status } = useSession()
+  const data = useSession()
 
-  console.log(session, status)
+  console.log(data)
   return (
     <>
-      <main className='h-[calc(100vh-4rem)] flex flex-col gap-y-10 items-center justify-center'>
-        <h1 className='font-bold text-3xl'>Perfil</h1>
+      <main className='pt-20'>
+        <h1 className='flex justify-center font-bold text-3xl text-light-coral-red'>
+          Rutas
+        </h1>
 
-        <pre className='bg-zinc-800 p-4'>
-          {JSON.stringify(
-            {
-              session,
-              status,
-            },
-            null,
-            2
-          )}
-        </pre>
-
+        <section className='flex flex-row text-center  pt-10'>
+          <h2 className='text-light-coral-red flex-1'>
+            <Link href='/components/introduccion'>Introducción</Link>
+          </h2>
+          <h2 className='text-light-coral-red flex-1'>
+            <Link href='/components/frontend'>Front-End</Link>
+          </h2>
+          <h2 className='text-light-coral-red flex-1'>
+            <Link href='/components/backend'>Back-End</Link>
+          </h2>
+        </section>
         <button
           className='bg-zinc-800 px-4 py-2 block mb-2'
           onClick={() => {
@@ -29,7 +32,7 @@ const Dashboard = () => {
           }}
         >
           Salir
-        </button>
+        </button> 
       </main>
     </>
   )
