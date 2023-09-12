@@ -17,7 +17,12 @@ const config: Config = {
         'deep-blue': '#001233',
         'light-coral-red': '#FF595A',
         'beige': '#CAC0B3',
-        'onyx': '#353935'
+        'onyx': '#353935',
+        'darker': '#222831',
+        'dark': '#4e535a',
+        'normal': '#7a7e83',
+        'light': '#a7a9ad',
+        'lighter': '#d3d4d6'
       },
       minHeight:{
         '1/4': '25%'

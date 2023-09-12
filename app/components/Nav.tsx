@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { DefaultSession } from 'next-auth'
+import styles from './Nav.module.scss'
 
 declare module 'next-auth' {
   interface Session {
@@ -18,37 +19,36 @@ function Navbar() {
   const userFullname = session?.user?.fullname
 
   return (
-    <main>
+    <>
       {session && (
-        <nav className='flex flex-row justify-between items-center m-4'>
-          <div className='flex-1'></div>
-          <h1 className='font-bold text-4xl text-light-coral-red flex-1 text-center'>
-            Mi TechWeb
-          </h1>
-
-          <section className='flex-1 text-right text-light-coral-red'>
-            <Link className='transition-all duration-75 ease-in-out hover:font-bold' href='/dashboard'>{userFullname}</Link>
-          </section>
-        </nav>
+        <>
+          <nav className={styles.nav}>
+            <h1 className={styles.h1}>CodeChronicles</h1>
+            <Link className={styles.link} href='/dashboard'>
+              {userFullname}
+            </Link>
+          </nav>
+          <hr className={styles.hr} />
+        </>
       )}
 
       {!session && (
-        <nav className='flex flex-row justify-between items-center m-4'>
-          <div className='flex-1'></div>
-          <h1 className='font-bold text-xl text-light-coral-red flex-1 text-center'>
-            Mi TechWeb
-          </h1>
-          <ul className='flex flex-1 gap-x-2 justify-end text-light-coral-red'>
-            <li className='px-5 transition-all duration-75 ease-in-out hover:font-bold'>
-              <Link href='/'>Iniciar Sesión</Link>
-            </li>
-            <li className='px-5 transition-all duration-75 ease-in-out hover:font-bold'>
-              <Link href='/register'>Registrate</Link>
-            </li>
-          </ul>
-        </nav>
+        <>
+          <nav className={styles.nav}>
+            <h1 className={styles.h1}>CodeChronicles</h1>
+            <ul className={styles.ul}>
+              <li className={styles.li}>
+                <Link href='/'>Iniciar Sesión</Link>
+              </li>
+              <li className={styles.li}>
+                <Link href='/register'>Registrate</Link>
+              </li>
+            </ul>
+          </nav>
+          <hr className={styles.hr} />
+        </>
       )}
-    </main>
+    </>
   )
 }
 
