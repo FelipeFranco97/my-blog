@@ -1,0 +1,19 @@
+@import '../../../colores.scss';
+
+.section {
+  color: $color-lightest;
+  width: 55vw;
+  height: 50vh;
+  margin: 5% auto 5% auto;
+
+  .article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .h1{
+        font-size: 25px;
+        padding-bottom: 5%;
+    }
+  }
+}
