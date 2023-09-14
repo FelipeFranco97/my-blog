@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 16px 0px;
+  margin: 16px 5%;
 
   .h1 {
     flex: 1;
@@ -42,7 +42,5 @@
 }
 
 .hr {
-  width: 100%;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin: 0 5%
 }
