@@ -1,5 +1,6 @@
 import Providers from "./Providers";
-import Navbar from "./components/Nav";
+import Navbar from "./components/nav/Nav";
+import Footer from "./components/footer/Footer";
 import "./globals.css";
 
 export const metadata = {
@@ -17,7 +18,8 @@ export default function RootLayout({
       <body>
         <Providers>
           <Navbar />
-          <div className="container mx-auto">{children}</div>
+          <div>{children}</div>
+          <Footer />
         </Providers>
       </body>
     </html>

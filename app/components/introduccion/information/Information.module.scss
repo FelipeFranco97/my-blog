@@ -1,0 +1,80 @@
+@import '../../../colores.scss';
+
+.section {
+  background-color: $color-dark;
+  width: 100%;
+  color: $color-lightest;
+
+  .section_info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .article_image {
+      margin: 0 5%;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      flex: 1;
+      overflow: hidden;
+      flex-direction: column;
+      display: flex;
+      text-align: center;
+
+      .image {
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .p {
+        font-size: calc(0.1vw + 0.5em);
+      }
+    }
+
+    .article_container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: end;
+      margin: 5% 5%;
+
+      .h2 {
+        font-size: calc(3vw + 1em);
+      }
+
+      .article_info {
+        font-size: calc(0.3vw + 1em);
+        line-height: calc(0.5vw + 1em);
+      }
+    }
+  }
+  .section_info_reverse {
+    flex-direction: row-reverse;
+
+    .article_container_reverse {
+      align-items: flex-start;
+      text-align: start;
+    }
+  }
+}
+
+.article_dato_true {
+  color: $color-lightest;
+  display: flex;
+  margin: 0 auto;
+  width: 50vw;
+  text-align: center;
+}
+
+.article_dato_false {
+  color: $color-lightest;
+  display: flex;
+  margin: 10% auto;
+  width: 50vw;
+  text-align: center;
+  justify-content: center;
+}
+

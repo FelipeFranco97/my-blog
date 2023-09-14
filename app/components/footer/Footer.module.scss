@@ -1,0 +1,9 @@
+@import '../../colores.scss';
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    color: $color-lightest;
+    margin: 5% 5% 3% 0;
+    font-size: calc(0.5vw + 0.5em);
+}
