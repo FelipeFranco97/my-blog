@@ -4,6 +4,7 @@ import axios, { AxiosError } from 'axios'
 import { FormEvent, useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import styles from '../login_register.module.scss'
 
 const Register = () => {
   const [error, setError] = useState()
@@ -37,39 +38,39 @@ const Register = () => {
   }
   return (
     <>
-      <main className='justify-center h-[calc(100vh-4rem)] flex items-center'>
+      <section className={styles.section_main}>
         <form
           onSubmit={handleSubmit}
-          className='bg-neutral-950 px-8 py-10 w-3/12'
+          className={styles.form_container}
         >
           {error && (
-            <div className="bg-red-500 text-white p-2 mb-2">{error}</div>
+            <section className={styles.section_error}>{error}</section>
           )}
-          <h1 className="text-4xl font-bold mb-7">Registrate</h1>
-          <label className="text-slate-300">Nombre :</label>
+          <h1 className={styles.h1_login}>Registrate</h1>
+          <label className={styles.label_credentials}>Nombre :</label>
           <input
             type='text'
             placeholder='Escribe tu nombre'
             name='fullname'
-            className="bg-zinc-800 px-4 py-2 block mb-2 w-full"
+            className={styles.input_credentials}
           />
-          <label className="text-slate-300">Email:</label>
+          <label className={styles.label_credentials}>Email:</label>
           <input
             type='email'
             placeholder='Escribe tu correo'
             name='email'
-            className="bg-zinc-800 px-4 py-2 block mb-2 w-full"
+            className={styles.input_credentials}
           />
-          <label className="text-slate-300">Password:</label>
+          <label className={styles.label_credentials}>Password:</label>
           <input
             type='password'
             placeholder='Escribe tu contraseña'
             name='password'
-            className="bg-zinc-800 px-4 py-2 block mb-2 w-full"
+            className={styles.input_credentials}
           />
-          <button className="bg-blue-500 text-white px-4 py-2 block w-full mt-4">Registrar</button>
+          <button className={styles.button_login}>Registrar</button>
         </form>
-      </main>
+      </section>
     </>
   )
 }

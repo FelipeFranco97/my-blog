@@ -2,6 +2,7 @@ import Providers from "./Providers";
 import Navbar from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
 import "./globals.css";
+import { navBar } from "@/assets/texts";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,11 +14,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const navBarData = navBar[0]
   return (
     <html lang="en">
       <body>
         <Providers>
-          <Navbar />
+          <Navbar {...navBarData}/>
           <div>{children}</div>
           <Footer />
         </Providers>

@@ -1,46 +1,51 @@
-.nav {
+@import '../../colores.scss';
+
+.nav_menu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 16px 5%;
+  margin: 2vh 5vw;
+  color: $color-lightest;
+  position: relative;
+  z-index: 1000;
 
-  .h1 {
+  .h1_web_title {
     flex: 1;
     font-weight: 700;
-    font-size: 20px;
-    color: #d3d4d6;
+    font-size: calc(0.5vw + 1em);
   }
-
-  .link {
+  .link_username {
+    font-size: calc(0.5vw + 0.6em);
     flex: 1;
     text-align: right;
-    color: #d3d4d6;
-    transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
+      cursor: pointer;
       font-weight: 700;
-    }
-  }
-
-  .ul {
-    display: flex;
-    flex: 1;
-    column-gap: 20px;
-    justify-content: flex-end;
-    color: #d3d4d6;
-
-    .li {
-      padding: 0xp 20px;
-      transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover {
-        font-weight: 700;
-      }
     }
   }
 }
 
 .hr {
-  margin: 0 5%
+  margin: 0 5vw;
+}
+
+.article_container_menu {
+  color: $color-lightest;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  position: absolute;
+  z-index: 10000;
+
+  .ul_lista {
+    background-color: $color-dark;
+    margin: 0 5vw;
+    padding: 1vh 2vw;
+
+    .li_lista {
+      margin: 1vh 2vw 1vh 0;
+    }
+  }
 }

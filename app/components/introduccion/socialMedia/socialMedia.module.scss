@@ -1,0 +1,51 @@
+@import '../../../colores.scss';
+
+.section_container_texto {
+  width: 55vw;
+  margin: 5% auto 5% auto;
+  color: $color-lightest;
+
+  .article_texto {
+    text-align: center;
+    font-size: calc(0.2vw + 1em);
+  }
+}
+
+.section_container_info {
+  display: flex;
+  width: 55vw;
+  margin: 5% auto 5% auto;
+  overflow: hidden;
+
+  .article_container_image {
+    display: flex;
+    margin: 0 3%;
+    justify-content: flex-end;
+    flex: 1;
+    height: 100%;
+
+    .image_profile {
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  .article_container_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 3%;
+    flex: 1;
+
+    .p_titulo {
+      font-size: calc(0.2vw + 1em);
+      color: $color-lightest;
+    }
+
+    .article_container_icon {
+      display: flex;
+      margin: 0 10%;
+      gap: 10%;
+      flex-direction: row;
+    }
+  }
+}

@@ -1,15 +1,46 @@
 import { HeroBannerIntroduccion } from '@/app/types/hero-banner.type'
 import { MidText } from '@/app/types/mid-text.type'
 import { Information } from '@/app/types/information.type'
+import { SocialMedia } from '@/app/types/social-media.type'
+import { Navbar } from '@/app/types/nav.type'
+
+export const navBar: Navbar[] = [
+  {
+    titulo: 'CodeChronicles',
+    menu: [
+      {
+        opcion: 'Inicio',
+        url: '/',
+      },
+      {
+        opcion: 'Cerrar Sesión',
+        url: '/',
+      },
+    ],
+    metodo: [
+      {
+        metodo: 'Iniciar Sesión',
+        url: '/login'
+      },
+      {
+        metodo: 'Registrate',
+        url: '/register',
+      },
+    ],
+  }
+]
 
 export const heroBannerIntroduccion: HeroBannerIntroduccion[] = [
   {
     titulo: 'Introducción',
     url: '/introduction_banner.jpg',
-    credits: 'Photo by Farzad on Unsplash',
+    credits: (
+      <>
+        Photo by <a href="https://unsplash.com/@euwars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target='_blank'>Farzad</a> on <a href="https://unsplash.com/photos/p-xSl33Wxyc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target='_blank'>Unsplash</a>
+      </>
+    ),
   },
 ]
-
 export const midText: MidText[] = [
   {
     titulo: '¡Hola ',
@@ -34,7 +65,11 @@ export const information: Information[] = [
       </>
     ),
     dato: 'El primer sitio web del mundo se creó en 1991 por Tim Berners-Lee y todavía puedes visitarlo en su forma original. Puedes visitarlo acá http://info.cern.ch',
-    credits: 'Image by pressfoto on Freepik',
+    credits: (
+      <>
+        <a href="https://www.freepik.com/free-photo/top-view-unrecognizable-hacker-performing-cyberattack-night_5698343.htm#query=front%20end&position=0&from_view=search&track=ais" target='_blank'>Image by pressfoto</a> on Freepik
+      </>
+    ),
     junto: false,
   },
   {
@@ -69,7 +104,11 @@ export const information: Information[] = [
       </>
     ),
     dato: 'La cantidad de sitios web en Internet supera los mil millones y sigue creciendo constantemente.',
-    credits: 'Photo by NASA on Unsplash',
+    credits: (
+      <>
+        Photo by <a href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target='_blank'>NASA</a> on <a href="https://unsplash.com/photos/Q1p7bh3SHj8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target='_blank'>Unsplash</a>
+      </>
+    ),
     junto: false,
   },
   {
@@ -99,7 +138,11 @@ export const information: Information[] = [
       </>
     ),
     dato: '',
-    credits: 'Photo by Markus Spiske on Unsplash',
+    credits: (
+      <>
+        Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target='_blank'>Markus Spiske</a> on <a href="https://unsplash.com/photos/iar-afB0QQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target='_blank'>Unsplash</a>
+      </>
+    ),
     junto: true,
   },
   {
@@ -131,7 +174,37 @@ export const information: Information[] = [
       </>
     ),
     dato: '',
-    credits: 'Photo by Deepanker Verma',
-    junto: false,
+    credits: (
+      <>
+        <a href="https://www.pexels.com/photo/black-google-smartphone-on-box-1482061/" target='_blank'>Photo by Deepanker Verma</a>
+      </>
+    ),
+    junto: true,
+  },
+]
+
+export const socialMedia: SocialMedia[] = [
+  {
+    url: '/perfil.jpg',
+    texto: (
+      <>
+        <p>
+          Todas las secciones de esta guía se irán actualizando con el
+          transcurso del tiempo, por ahora dejaremos la introducción y te invito
+          a que veas la próxima ruta, suerte!
+        </p>
+      </>
+    ),
+    titulo: 'Mira mis redes sociales',
+    icon: [
+      {
+        url: '/github-mark-white.png',
+        website: 'https://github.com/FelipeFranco97'
+      },
+      {
+        url: '/LI-In-Bug.png',
+        website: 'https://www.linkedin.com/in/juan-felipe-franco-zuluaga-226ab9158/'
+      }
+    ]
   },
 ]

@@ -1,0 +1,58 @@
+@import '../colores.scss';
+
+.section_main {
+  display: flex;
+  justify-content: center;
+  margin: 15vh 0;
+
+  .form_container {
+    color: $color-lightest;
+    width: 30vw;
+    background-color: $color-dark;
+    padding: 4% 5%;
+    border-radius: 5%;
+
+    .section_error {
+      color: $color-darkest;
+      background-color: $color-light;
+      margin-bottom: 5vh;
+      text-align: center;
+      font-size: calc(0.5vw + 0.7em);
+      font-weight: 700;
+      border-radius: 0.4rem;
+    }
+
+    .h1_login {
+      text-align: center;
+      font-size: calc(1vw + 1em);
+      font-weight: 700;
+      margin-bottom: 4vh;
+    }
+
+    .label_credentials {
+		font-size: calc(.6vw + .6em);
+      font-weight: 700;
+    }
+
+	.input_credentials {
+		padding: 2% 2%;
+		display: block;
+		width: 100%;
+		background-color: $color-darkest;
+		border-radius: 0.4rem;
+		margin: 3% 0;
+	}
+
+	.button_login {
+		background-color: $color-lightest;
+		color: $color-darkest;
+		border-radius: 0.4rem;
+		text-align: center;
+		height: 6vh;
+		width: 100%;
+		font-weight: 700;
+		font-size: calc(.7vw + .7em);
+		margin: 15% 0 2% 0
+	}
+  }
+}

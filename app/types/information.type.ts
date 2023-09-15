@@ -3,7 +3,7 @@ export interface Information {
     titulo: string,
     texto?: JSX.Element,
     dato: string,
-    credits: string,
+    credits: JSX.Element,
     junto: boolean,
     className?: string,
 }

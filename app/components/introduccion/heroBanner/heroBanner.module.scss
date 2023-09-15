@@ -1,42 +1,49 @@
 @import '../../../colores.scss';
 
-.section {
+.section_main {
   color: $color-lightest;
-  display: flex;
   width: 100%;
   height: calc(50vh - 60px);
-  justify-content: center;
-  align-items: center;
 
-  .image {
+  .section_container {
     position: absolute;
     top: 0;
     width: 100%;
     height: 50vh;
-    object-fit: cover;
-    filter: blur(2px);
-    opacity: 0.3;
-    z-index: -1;
+    display: flex;
+
+    .article_background {
+      position: relative; 
+      width: 100%;
+      height: 100%;
+
+      .image_background { 
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(2px);
+        opacity: 0.3;
+        z-index: -1;
+      }
+
+      .article_credits {
+        position: absolute; 
+        bottom: 0; 
+        right: 0; 
+        .p_credits {
+          font-size: calc(0.1vw + 0.5em);
+        }
+      }
+    }
   }
 
-  .article {
-    position: relative;
-    width: 100%;
+  .article_titulo {
     height: 100%;
-
-    .h1 {
-      font-size: calc(2vw + 1em);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .p {
-      font-size: calc(0.1vw + 0.5em);
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin-right: 5%;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(2vw + 1em);
   }
 }

@@ -3,7 +3,7 @@
 import { FormEvent, useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
+import styles from '../login_register.module.scss'
 
 const Login = () => {
   const [error, setError] = useState('')
@@ -17,46 +17,43 @@ const Login = () => {
     const res = await signIn('credentials', {
       email: formData.get('email'),
       password: formData.get('password'),
-      redirect: false
+      redirect: false,
     })
 
     if (res?.error) {
-      setError('Credenciales Incorrectas');
+      setError('Credenciales Incorrectas')
     } else if (res?.ok) {
-      router.push('/dashboard');
+      router.push('/dashboard')
     }
   }
   return (
-    <main className='justify-center flex pt-32'>
+    <section className={styles.section_main}>
+      <form onSubmit={handleSubmit} className={styles.form_container}>
+        {error && <section className={styles.section_error}>{error}</section>}
 
-      <form onSubmit={handleSubmit} className='bg-light-coral-red px-8 py-10 w-3/12 rounded-xl '>
+        <h1 className={styles.h1_login}>Inicia Sesión</h1>
 
-        {error && <div className='bg-deep-blue text-light-coral-red p-2 mb-7 rounded-lg text-center'>{error}</div>}
-
-        <h1 className='text-4xl font-bold mb-7 text-beige text-center'>Inicia Sesión</h1>
-
-        <label className='text-beige font-bold'>Email:</label>
+        <label className={styles.label_credentials}>Email:</label>
         <input
           type='email'
           placeholder='Escribe tu correo'
           name='email'
-          className='bg-zinc-800 text-beige px-4 py-2 block mb-7 w-full rounded-lg'
+          className={styles.input_credentials}
         />
 
-        <label className='text-beige font-bold'>Contraseña:</label>
+        <label className={styles.label_credentials}>Contraseña:</label>
         <input
           type='password'
           placeholder='Escribe tu contraseña'
           name='password'
-          className='bg-zinc-800 text-beige px-4 py-2 block mb-7 w-full rounded-lg'
+          className={styles.input_credentials}
         />
 
-        <button className='bg-deep-blue text-light-coral-red font-bold px-4 py-2 block w-full mt-4 rounded-lg'>
+        <button className={styles.button_login}>
           Iniciar Sesión
         </button>
-
       </form>
-    </main>
+    </section>
   )
 }
 
