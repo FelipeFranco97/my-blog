@@ -1,21 +1,21 @@
 @import '../../../colores.scss';
 
-.section {
+.section_midtext {
   color: $color-lightest;
   width: 55vw;
-  margin: 5% auto 5% auto;
+  margin: 10vh auto;
 
-  .article {
+  .article_midtext {
     display: flex;
     flex-direction: column;
     text-align: center;
 
-    .h1{
+    .h1_midtext{
         font-size: calc(1vw + 1em);
-        padding-bottom: 5%;
+        padding-bottom: 5vh;
     }
 
-    .p {
+    .p_midtext {
       font-size: calc(.2vw + 1em);
     }
   }

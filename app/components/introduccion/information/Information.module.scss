@@ -52,6 +52,32 @@
       }
     }
   }
+
+  @media (orientation: portrait) {
+    .section_info {
+      display: block;
+      .article_image {
+        display: flex;
+       margin: 0 auto;
+       width: 50%;
+       height: 50%;
+      }
+
+      .article_container {
+        align-items: flex-start;
+        text-align: start;
+        margin: 0 10vw;
+
+        .h2_title{
+          margin: 2vh 0;
+        }
+
+        .article_info {
+          margin: 2vh 0 5vh 0;
+        }
+      }
+    }
+  }
   .section_info_reverse {
     flex-direction: row-reverse;
 
@@ -62,7 +88,7 @@
   }
 }
 
-.article_dato_false {
+.article_dato {
   color: $color-lightest;
   display: flex;
   margin: 10% auto;
@@ -70,4 +96,12 @@
   text-align: center;
   justify-content: center;
   font-size: calc(0.5vw + .5em);
+
+}
+
+@media (orientation: portrait) {
+  .article_dato {
+    text-align: start;
+    font-size: calc(0.8vw + .8em);
+  }
 }

@@ -46,10 +46,10 @@ function Navbar(props: Navbar) {
                 {props.menu.map((opcion, index) => {
                   if (index === 1) {
                     return (
-                      <Link onClick={handleMenu} key={index} href={opcion.url}>
+                      <Link key={index} href={opcion.url}>
                         <li
                           className={styles.li_lista}
-                          onClick={() => signOut()}
+                          onClick={() => signOut({ callbackUrl: '/login' })}
                         >
                           {opcion.opcion}
                         </li>
@@ -75,9 +75,12 @@ function Navbar(props: Navbar) {
         <>
           <nav className={styles.nav_menu}>
             <h1 className={styles.h1_web_title}>{props.titulo}</h1>
-            <ul className={styles.ul_container}>
+            <ul className={styles.ul_metodo}>
               {props.metodo.map((metodo, index) => (
-                <li key={index}>{metodo.metodo}</li>
+                <Link key={index} href={metodo.url}>
+                <li className={styles.li_metodo} key={index}>{metodo.metodo}</li>
+                </Link>
+                
               ))}
             </ul>
           </nav>

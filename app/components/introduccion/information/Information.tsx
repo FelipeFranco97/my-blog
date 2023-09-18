@@ -28,7 +28,7 @@ const Information = (props: Information) => {
         <>
         </>
       ) : (
-        <article className={styles.article_dato_false}>
+        <article className={styles.article_dato}>
           <p className={styles.p_dato}>{props.dato}</p>
         </article>
       )}

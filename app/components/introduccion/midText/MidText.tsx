@@ -18,13 +18,13 @@ const MidText = (props: MidText) => {
 
   const userFullname = session?.user?.fullname
   return (
-    <section className={styles.section}>
-      <article className={styles.article}>
-        <h1 className={styles.h1}>
+    <section className={styles.section_midtext}>
+      <article className={styles.article_midtext}>
+        <h1 className={styles.h1_midtext}>
           {props.titulo} {userFullname}
           {'!'}
         </h1>
-        <p className={styles.p}>{props.texto}</p>
+        <p className={styles.p_midtext}>{props.texto}</p>
       </article>
     </section>
   )

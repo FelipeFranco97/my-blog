@@ -25,6 +25,17 @@
       font-weight: 700;
     }
   }
+  .ul_metodo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20%;
+
+    .li_metodo {
+      white-space: nowrap;
+      font-size: calc(0.5vw + 0.6em)
+    }
+  }
 }
 
 .hr {
@@ -38,6 +49,7 @@
   justify-content: flex-end;
   position: absolute;
   z-index: 10000;
+  font-size: calc(0.5vw + 0.6em);
 
   .ul_lista {
     background-color: $color-dark;

@@ -56,3 +56,11 @@
 	}
   }
 }
+
+@media (orientation: portrait) {
+  .section_main {
+    .form_container {
+      width: 80vw;
+    }
+  }
+}

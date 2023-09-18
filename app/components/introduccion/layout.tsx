@@ -7,7 +7,7 @@ import MidText from './midText/MidText'
 import Information from './information/Information'
 import SocialMedia from './socialMedia/socialMedia'
 
-export default function IntroduccionLayout({
+function IntroduccionLayout({
   children,
 }: {
   children: React.ReactNode
@@ -28,3 +28,5 @@ export default function IntroduccionLayout({
     </div>
   )
 }
+
+export default IntroduccionLayout
