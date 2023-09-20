@@ -69,11 +69,24 @@ export const information: Information[] = [
     texto: (
       <>
         <p>
-          El desarrollo web es el proceso de construcción y mantenimiento de
-          sitios web que son accesibles a través de internet, este proceso de
-          construcción implica el diseño, la programación, las pruebas y la
-          optimización para garantizar que los usuarios tengan una experiencia
-          eficiente al interactuar con el sitio web en cuestion.
+          Bienvenido al mundo del desarrollo web, donde la creatividad se
+          encuentra con la tecnología para dar vida a sitios web sorprendentes y
+          funcionales. Si alguna vez te has preguntado cómo se construyen las
+          páginas web que visitas a diario, estás a punto de descubrirlo.
+        </p>
+        <br />
+        <p>
+          El desarrollo web es el arte y la ciencia de crear y mantener sitios
+          web. Es el proceso creativo y técnico que permite transformar ideas e
+          información en experiencias interactivas en línea. En otras palabras,
+          es la magia que convierte simples archivos de código en páginas web
+          que puedes explorar y disfrutar en tu navegador.
+        </p>
+        <br />
+        <p>
+          El desarrollo web abarca un amplio espectro de habilidades y
+          conocimientos, desde el diseño y la disposición visual hasta la
+          programación y la gestión de servidores.
         </p>
       </>
     ),
