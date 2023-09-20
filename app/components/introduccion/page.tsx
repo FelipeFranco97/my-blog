@@ -1,4 +1,4 @@
-const Introduccion = (props: {titulo:string}) => {
+const Introduccion = () => {
   return (
     <>
     </>
